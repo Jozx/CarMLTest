@@ -93,6 +93,9 @@
                                             <segment title="307"/>
                                             <segment title="407"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="calculateValue" destination="uHK-YE-jn0" eventType="valueChanged" id="hIp-J3-Qg8"/>
+                                        </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extras" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAP-aP-JFb">
                                         <rect key="frame" x="0.0" y="65" width="315" height="21"/>
@@ -103,8 +106,11 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1h3-C5-KPN">
                                         <rect key="frame" x="0.0" y="94" width="317" height="31"/>
                                         <color key="onTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="calculateValue" destination="uHK-YE-jn0" eventType="valueChanged" id="wvK-pJ-w3R"/>
+                                        </connections>
                                     </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kilometraje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKa-NN-xgk">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kilometraje:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKa-NN-xgk">
                                         <rect key="frame" x="0.0" y="133" width="315" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -112,6 +118,9 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120000" minValue="0.0" maxValue="400000" translatesAutoresizingMaskIntoConstraints="NO" id="53g-7a-aRD">
                                         <rect key="frame" x="-2" y="162" width="319" height="31"/>
+                                        <connections>
+                                            <action selector="calculateValue" destination="uHK-YE-jn0" eventType="valueChanged" id="C7b-iw-P60"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaP-Ip-VjW">
                                         <rect key="frame" x="0.0" y="200" width="315" height="21"/>
@@ -127,6 +136,9 @@
                                             <segment title="Muy Bueno"/>
                                             <segment title="Perfecto"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="calculateValue" destination="uHK-YE-jn0" eventType="valueChanged" id="nay-HU-Pg1"/>
+                                        </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio de Venta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3P-Ay-YMT">
                                         <rect key="frame" x="0.0" y="265" width="315" height="21"/>
@@ -152,6 +164,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="97C-JI-fcH"/>
                     </view>
+                    <connections>
+                        <outlet property="extrasSwitch" destination="1h3-C5-KPN" id="8gQ-Uk-oe9"/>
+                        <outlet property="kmsLabel" destination="EKa-NN-xgk" id="OfL-fg-GhI"/>
+                        <outlet property="kmsSlider" destination="53g-7a-aRD" id="ZqP-YB-m7e"/>
+                        <outlet property="modelSegmentedControl" destination="Rr2-fM-MzX" id="Xa7-uS-7S8"/>
+                        <outlet property="priceLabel" destination="frz-ME-xwm" id="jy2-MD-wuv"/>
+                        <outlet property="stackView" destination="yx5-R9-An9" id="Zli-RR-Mhx"/>
+                        <outlet property="statusSegmentedControl" destination="hWx-1n-45y" id="FZ2-Aa-iH4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhY-rv-aDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

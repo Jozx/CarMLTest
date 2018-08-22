@@ -9,7 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var modelSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var extrasSwitch: UISwitch!
+    @IBOutlet weak var kmsLabel: UILabel!
+    @IBOutlet weak var kmsSlider: UISlider!
+    @IBOutlet weak var statusSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +30,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+
+    @IBAction func calculateValue() {
+        
+    }
+    
+    
 
 }
 
